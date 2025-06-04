@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 2025 Birthday: A Day to Remember</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset and Font */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40; 
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ffb6c1; 
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff69b4; 
+        }
+
+        /* Header Styling with Gradient Animation */
+        header {
+            background: linear-gradient(135deg, #ff69b4, #ff8c00); 
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite alternate; 
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        header h1 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 2.5rem; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 900px; 
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 30px; 
+            overflow-x: hidden; 
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); 
+        }
+
+        h2 {
+            color: #e91e63; 
+            border-bottom: 3px solid #ffb6c1; 
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        strong {
+            color: #d81b60; 
+        }
+
+        .birthday-story .image-placeholder {
+            text-align: center;
+            margin-top: 25px;
+            background-color: #f0f2f5; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .birthday-story .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .birthday-story .image-placeholder img:hover {
+            transform: scale(1.02); 
+        }
+
+        .birthday-story .image-placeholder .caption {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .special-ones button {
+            background-color: #8a2be2;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .special-ones button:hover {
+            background-color: #6a0dad;
+            transform: translateY(-2px);
+            animation: pulse 1.5s infinite; 
+        }
+
+        .special-ones button:active {
+            transform: translateY(0); 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: pop 0.2s ease-out; 
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+            50% { box-shadow: 0 0 0 5px rgba(138, 43, 226, 0.4); } 
+            100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        }
+
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+        #hiddenMessage {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fffacd; 
+            border: 1px dashed #ffc0cb; 
+            border-radius: 10px;
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Photo Album Section Styling */
+        .photo-album .album-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-album .album-item {
+            background-color: #fefefe;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            overflow: hidden; 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: center;
+            transform-style: preserve-3d; 
+        }
+
+        .photo-album .album-item:hover {
+            transform: translateY(-5px) scale(1.02) rotateY(3deg) rotateX(2deg); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo-album .album-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-bottom: 1px solid #370a0a;
+        }
+
+        .photo-album .album-item .album-caption {
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #555;
+            font-style: italic; 
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .video-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .video-section video {
+            max-width: 100%; 
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background-color: #000;
+        }
+
+        .video-section .video-caption {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px; 
+            background-color: #ff69b4;
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main {
+                margin: 20px 10px;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .special-ones button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .photo-album .album-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            main {
+                margin: 15px 5px;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+
+            .photo-album .album-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My 2025 Birthday: A Day to Remember!</h1>
+        <p>A beautiful celebration filled with love, laughter, and cherished moments.</p>
+    </header>
+
+    <main>
+        <section class="birthday-story">
+            <h2>The Joy of Celebration</h2>
+            <p>My birthday on June 3rd, 2025, was truly a day to cherish, brimming with warmth and happiness, all thanks to my wonderful family! The absolute highlight was undoubtedly cutting the cake hand-in-hand with my adorable little sister, <strong>Amaira</strong>. Her infectious joy and bright smile made that moment sparkle even brighter.</p>
+            <p>We captured countless <strong>family pictures</strong>, each one a testament to the laughter and love that filled the air. It was incredibly heartwarming to share this special day and all its happiness with so many dear ones. It truly reinforced the incredible bond and support that surrounds me.</p>
+            <div class="image-placeholder">
+                <!-- You can easily replace this with your actual family photos! -->
+                <img src="family 2.jpeg" alt="Family celebrating birthday">
+                <p class="caption">Precious moments with my beloved family!</p>
+            </div>
+        </section>
+
+        <section class="photo-album" >
+            <h2>Birthday Photo Album</h2>
+            <p >Here are some more glimpses from the day, capturing the fun, the cake, and the wonderful people who made it so special!</p>
+            <div class="album-grid">
+                <div class="album-item">
+                    <img style="height: auto;" src="cake cutting.jpeg" alt="Cake cutting moment">
+                    <p class="album-caption">The delicious cake being cut with Amaira!</p>
+                </div>
+                <div class="album-item">
+                    <img src="family 3.jpeg" alt="Family group photo" style="height: auto;">
+                    <p class="album-caption">A lovely group photo with family.</p>
+                </div>
+
+                <div class="album-item">
+                    <img src="dada me.jpeg" alt="Birthday decorations" style="height: auto;">
+                    <p class="album-caption" >me and Dada ji</p>
+                </div>
+                <div class="album-item">
+                    <img src="cake.jpeg" alt="Amaira and me" style="height: auto;">
+                    <p class="album-caption">the Delecious Cake</p>
+                </div>
+
+                <div class="album-item">
+                    <img src="meAmaira.jpg" alt="Happy faces" style="height: auto;">
+                    <p class="album-caption">Amaira and Me</p>
+                </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>Amaira's Special Birthday Song!</h2>
+            <p>The most enthusiastic birthday wish came from my little sister, Amaira, who was incredibly excited to sing "Happy Birthday"!</p>
+            <video controls poster="https://placehold.co/500x720/8A2BE2/FFFFFF?text=Amaira's+Song">
+
+                <source src="vdo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="video-caption">Amaira, the most excited little singer!</p>
+        </section>
+
+        <section class="special-ones">
+            <h2>A Message to Special Hearts</h2>
+            <p>While my birthday was incredibly joyful, there was <strong>a special people</strong> whose presence I deeply missed. I did even not able to talk on that day... It brings a gentle wistfulness to my heart, but also a strong sense of anticipation for when our paths cross again. I know that when we finally reunite, we'll create even more unforgettable memories and celebrate in our own unique way.</p>
+            <button id="revealMessage">Share a Little Bit of Happiness</button>
+            <p id="hiddenMessage" class="hidden">To Hey, my special one: Even though you couldn't be here, you were in my thoughts and heart. Just waiting for our next meeting to share all the happiness!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Birthday Memories. Crafted with love By me, Anshu Raj 💕.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealButton = document.getElementById('revealMessage');
+            const hiddenMessage = document.getElementById('hiddenMessage');
+
+            if (revealButton && hiddenMessage) {
+                revealButton.addEventListener('click', function() {
+                    hiddenMessage.classList.toggle('hidden');
+
+                    if (hiddenMessage.classList.contains('hidden')) {
+                        revealButton.textContent = 'Share a Little Bit of Happiness';
+                    } else {
+                        revealButton.textContent = 'Hide Message';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
